@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles (optional) */
+/* Optional: global dark theme styles */
 body {
   @apply bg-black text-white antialiased;
 }
