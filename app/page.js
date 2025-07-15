@@ -1,3 +1,5 @@
+"use client"; // Mark as Client Component for useEffect
+
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -9,6 +11,10 @@ export default function Home() {
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(section => observer.observe(section));
+
+    // Handle logo fade-in
+    const logo = document.querySelector('.logo');
+    setTimeout(() => logo.classList.add('visible'), 100);
   }, []);
 
   return (
@@ -33,7 +39,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <div className="globe-bg" style={{ background: `url('https://via.placeholder.com/300?text=Custom+Dark+Globe') no-repeat center center`, backgroundSize: 'cover', opacity: 0.2, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
+      <div className="globe-bg" style={{ background: `url('https://via.placeholder.com/300?text=Custom+Dark+Globe') no-repeat center center`, backgroundSize: 'cover', opacity: 0.2, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />
       <section id="home" className="p-6 text-center fade-in max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">NexGen AI</h1>
         <img src="https://via.placeholder.com/300?text=Robot+with+AI+Info" alt="Robot with AI info" className="robot-img" />
@@ -79,14 +85,8 @@ export default function Home() {
         .fade-in.visible { opacity: 1; transform: translateY(0); }
         .logo.visible { opacity: 1; transform: translateX(0); }
         .robot-img { max-width: 300px; height: auto; margin: 1rem auto; }
-        .globe-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .globe-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('https://via.placeholder.com/300?text=Custom+Dark+Globe') no-repeat center center; background-size: cover; opacity: 0.2; }
       `}</style>
-      <script>
-        window.addEventListener('load', () => {
-          const logo = document.querySelector('.logo');
-          setTimeout(() => logo.classList.add('visible'), 100);
-        });
-      </script>
     </div>
   );
 }
