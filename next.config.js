@@ -1,9 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
+module.exports = {
+  // Remove or comment out the invalid 'appDir' option
+  // experimental: {
+  //   appDir: true, // Comment this out or remove it
+  // },
 };
-
-module.exports = nextConfig;
