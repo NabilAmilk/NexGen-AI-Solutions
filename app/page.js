@@ -1,5 +1,3 @@
-"use client"; // Mark as Client Component for useEffect
-
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -84,7 +82,6 @@ export default function Home() {
         .globe-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
       `}</style>
       <script>
-        // Simulate logo fade-in on load
         window.addEventListener('load', () => {
           const logo = document.querySelector('.logo');
           setTimeout(() => logo.classList.add('visible'), 100);
