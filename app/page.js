@@ -1,4 +1,6 @@
-import Head from 'next/head';
+"use client"; // Mark this as a Client Component
+
+import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
@@ -13,11 +15,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen pt-20 bg-black text-white">
-      <Head>
+      <head>
         <title>NexGen AI</title>
         <meta name="description" content="NexGen AI - Your Trusted AI Transformation Partners, offering AI automation services globally from South Africa." />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
-      </Head>
+      </head>
       <header className="header p-4 flex justify-between items-center fixed w-full z-10 bg-black bg-opacity-90 backdrop-blur-md">
         <div className="logo flex items-center space-x-2">
           <img src="https://via.placeholder.com/150?text=NexGen+AI+Logo" alt="NexGen AI Logo" className="h-12" />
@@ -61,29 +63,4 @@ export default function Home() {
         <img src="https://via.placeholder.com/300?text=Robot+with+AI+Info" alt="Robot with AI info" className="robot-img" />
         <p className="mt-4">We offer a range of AI automation services, including:</p>
         <ul className="list-disc list-inside mt-2">
-          <li>Process Optimization: Streamline operations with intelligent workflows.</li>
-          <li>Custom AI Solutions: Bespoke AI tools designed for your business needs.</li>
-          <li>Consulting: Expert guidance to integrate AI into your strategy.</li>
-        </ul>
-      </section>
-      <section id="contact" className="p-6 fade-in max-w-4xl mx-auto">
-        <h2 className="text-3xl text-[#00C4FF]">Contact Us</h2>
-        {/* ContactForm component would go here */}
-      </section>
-      <section id="what-is-ai" className="p-6 fade-in max-w-4xl mx-auto">
-        <h2 className="text-3xl text-[#00C4FF]">What is AI Automation?</h2>
-        <img src="https://via.placeholder.com/300?text=Robot+with+AI+Info" alt="Robot with AI info" className="robot-img" />
-        <p className="mt-4">AI automation involves using artificial intelligence to automate repetitive tasks, enhance decision-making, and optimize business processes. At NexGen AI, we leverage machine learning, natural language processing, and robotic process automation to deliver efficiency gains, cost reductions, and innovation. Whether it’s automating customer support or analyzing data, AI automation is the future of business scalability.</p>
-      </section>
-      <style jsx>{`
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .logo { opacity: 0; transform: translateX(-20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .logo.visible { opacity: 1; transform: translateX(0); }
-        .robot-img { max-width: 300px; height: auto; margin: 1rem auto; }
-      `}</style>
-    </div>
-  );
-}
-
-import { useEffect } from 'react';
+          <li>Process Optimization: Streamline operations
