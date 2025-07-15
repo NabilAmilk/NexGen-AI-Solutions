@@ -1,4 +1,4 @@
-"use client"; // Mark this as a Client Component
+"use client"; // Mark as Client Component for useEffect
 
 import { useEffect } from 'react';
 
@@ -21,7 +21,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
       </head>
       <header className="header p-4 flex justify-between items-center fixed w-full z-10 bg-black bg-opacity-90 backdrop-blur-md">
-        <div className="logo flex items-center space-x-2">
+        <div className="logo flex items-center space-x-2 opacity-0 translate-x-[-20px] transition-opacity duration-600 ease-in-out transition-transform duration-600 ease-in-out">
           <img src="https://via.placeholder.com/150?text=NexGen+AI+Logo" alt="NexGen AI Logo" className="h-12" />
           <h1 className="text-xl text-[#00C4FF]">NexGen AI</h1>
         </div>
@@ -48,7 +48,6 @@ export default function Home() {
           <p>‘Reduced costs by 25% with seamless integration’ - John Smith, InnoVision</p>
           <p>‘Transformed our workflow in just 3 months’ - Sarah Lee, GlobalSys</p>
         </div>
-        {/* ContactForm and BookACall components would need to be defined separately */}
       </section>
       <div className="w-full py-4 bg-black text-center fade-in">
         <p className="text-[#00C4FF] text-sm">Collaborators: TechCorp, InnoVision, GlobalSys</p>
@@ -63,4 +62,34 @@ export default function Home() {
         <img src="https://via.placeholder.com/300?text=Robot+with+AI+Info" alt="Robot with AI info" className="robot-img" />
         <p className="mt-4">We offer a range of AI automation services, including:</p>
         <ul className="list-disc list-inside mt-2">
-          <li>Process Optimization: Streamline operations
+          <li>Process Optimization: Streamline operations with intelligent workflows.</li>
+          <li>Custom AI Solutions: Bespoke AI tools designed for your business needs.</li>
+          <li>Consulting: Expert guidance to integrate AI into your strategy.</li>
+        </ul>
+      </section>
+      <section id="contact" className="p-6 fade-in max-w-4xl mx-auto">
+        <h2 className="text-3xl text-[#00C4FF]">Contact Us</h2>
+        {/* Placeholder for ContactForm - to be implemented as a separate component */}
+      </section>
+      <section id="what-is-ai" className="p-6 fade-in max-w-4xl mx-auto">
+        <h2 className="text-3xl text-[#00C4FF]">What is AI Automation?</h2>
+        <img src="https://via.placeholder.com/300?text=Robot+with+AI+Info" alt="Robot with AI info" className="robot-img" />
+        <p className="mt-4">AI automation involves using artificial intelligence to automate repetitive tasks, enhance decision-making, and optimize business processes. At NexGen AI, we leverage machine learning, natural language processing, and robotic process automation to deliver efficiency gains, cost reductions, and innovation. Whether it’s automating customer support or analyzing data, AI automation is the future of business scalability.</p>
+      </section>
+      <style jsx>{`
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .logo.visible { opacity: 1; transform: translateX(0); }
+        .robot-img { max-width: 300px; height: auto; margin: 1rem auto; }
+        .globe-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+      `}</style>
+      <script>
+        // Simulate logo fade-in on load
+        window.addEventListener('load', () => {
+          const logo = document.querySelector('.logo');
+          setTimeout(() => logo.classList.add('visible'), 100);
+        });
+      </script>
+    </div>
+  );
+}
