@@ -35,7 +35,7 @@ export default function Home() {
             <li><a href="#about" className="text-white hover:text-[#00C4FF]">About Us</a></li>
             <li><a href="#services" className="text-white hover:text-[#00C4FF]">Services</a></li>
             <li><a href="#contact" className="text-white hover:text-[#00C4FF]">Contact Us</a></li>
-            <li><a href="#what-is-ai" className="text-white hover:text-[#00C4FF]">What is AI Automation</a></li>
+            <li><a href="#what-is-ai" className="text-white hover:text-[#00C4FF]">What is AI Automation and how will it benifit your business in this growing ai space  </a></li>
           </ul>
         </nav>
       </header>
