@@ -50,7 +50,7 @@ export default function Home() {
         <div className="mt-4 space-y-2">
           <p>‘Increased efficiency by 40% for 15+ clients’ - TechCorp</p>
           <p>‘Reduced costs by 25% with seamless integration’ -, InnoVision</p>
-          <p>‘Transformed our workflow an dincresed productivity in just 3 months’ , GlobalSys</p>
+          <p>‘Transformed our workflow an incresed productivity in just 3 months’ , GlobalSys</p>
         </div>
       </section>
       <div className="w-full py-4 bg-black text-center fade-in">
@@ -78,7 +78,7 @@ export default function Home() {
       <section id="what-is-ai" className="p-6 fade-in max-w-4xl mx-auto">
         <h2 className="text-3xl text-[#00C4FF]">What is AI Automation and How Will it Benifit your Business?</h2>
         <img src="https://via.placeholder.com/300?text=Robot+with+AI+Info" alt="Robot with AI info" className="robot-img" />
-        <p className="mt-4">AI automation involves using artificial intelligence to automate repetitive tasks, enhance decision-making, and optimize business processes. At NexGen AI, we leverage machine learning, natural language processing, and robotic process automation to deliver efficiency gains, cost reductions, and innovation. Whether it’s automating customer support or analyzing data, AI automation is the future of business scalability.</p>
+        <p className="mt-4">AI automation involves using artificial intelligence to automate repetitive tasks, enhance decision-making, and optimize business processes. At NexGen AI, we leverage machine learning, natural language processing, and robotic process automation to deliver efficiency gains, cost reductions, and innovation ther it’s automating customer support or analyzing data, AI automation is the future of business scalability.</p>
       </section>
       <style jsx>{`
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
